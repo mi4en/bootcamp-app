@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const colors = require('colors');
+const errorHandler = require('./middleware/error');
 const connectDB = require('./config/db');
 
 // Load env vars
@@ -25,6 +26,10 @@ if (process.env.NODE_ENV === 'development') {
 
 // Mount routers
 app.use('/api/v1/bootcamps', bootcamps);
+
+// Since we are using the error handler in the controllers which are part of router logic
+// we MUST invoke the errorHandler after the router
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
