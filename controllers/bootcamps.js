@@ -3,7 +3,6 @@ const asyncHandler = require('../middleware/async');
 const ErrorResponse = require('../utils/errorResponse');
 const geocoder = require('../utils/geocoder');
 
-// *****@***** //
 // @desc    Get all bootcamps
 // @route   GET /api/v1/bootcamps
 // @access  Public
@@ -79,7 +78,6 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
   });
 });
 
-// *****@***** //
 // @desc    Get single bootcamps
 // @route   GET /api/v1/bootcamps/:id
 // @access  Public
@@ -95,7 +93,6 @@ exports.getBootcamp = asyncHandler(async (req, res, next) => {
   res.status(200).json({ success: true, data: bootcamp });
 });
 
-// *****@***** //
 // @desc    Create new bootcamp
 // @route   POST /api/v1/bootcamps
 // @access  Private
@@ -104,7 +101,6 @@ exports.createBootcamp = asyncHandler(async (req, res, next) => {
   res.status(201).json({ success: true, data: bootcamp });
 });
 
-// *****@***** //
 // @desc    Update bootcamp
 // @route   PUT /api/v1/bootcamps/:id
 // @access  Public
@@ -123,7 +119,6 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
   res.status(200).json({ success: true, data: bootcamp });
 });
 
-// *****@***** //
 // @desc    Delete bootcamp
 // @route   DELETE /api/v1/bootcamps/:id
 // @access  Public
@@ -141,7 +136,6 @@ exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
   res.status(200).json({ success: true, data: {} });
 });
 
-// *****@***** //
 // @desc    Get bootcamps within a radius
 // @route   GET /api/v1/bootcamps/radius/:zipcode/:distance
 // @access  Public
