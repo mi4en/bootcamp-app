@@ -1,4 +1,3 @@
-const path = require('path');
 const crypto = require('crypto');
 const User = require('../models/User');
 const asyncHandler = require('../middleware/async');
