@@ -36,7 +36,7 @@ node seeder -i
 
 ## Demo
 
-The API is live at [bootcamps.site](https://devcamper.io)
+The API is live at [bootcamps.site](http://bootcamps.site)
 
 Extensive documentation with examples [here](https://documenter.getpostman.com/view/6265709/SVzxYKQB?version=latest)
 
